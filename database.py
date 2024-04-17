@@ -7,7 +7,7 @@ DATABASE_URI, DATABASE_NAME, COLLECTION_NAME = Config.DATABASE_URI, Config.DATAB
 
 client = AsyncIOMotorClient(DATABASE_URI)
 db = client[DATABASE_NAME]
-instance = Instance(db)
+instance = Instance.from_db(db)
 
 
 @instance.register
